@@ -34,9 +34,9 @@ $client_agent = $_SERVER['HTTP_USER_AGENT'];
 $page_title =  'AWS Cloud - ' . $server_name;
 $php_self = $_SERVER['SCRIPT_NAME'];
 
-/** Check for page refresh, defaults to 5 mins **/
+/** Check for page refresh, defaults to none  **/
 if (empty($_GET['refresh'])) {
-     $page_refresh = 300;
+     $page_refresh = "none";
    } else {
      $page_refresh = $_GET['refresh'];
 }
@@ -93,12 +93,13 @@ if (empty($_GET['refresh'])) {
     <div id="main-nav">
         <div id="links">
             <ul>
-                <li><span>Refresh</span></li>
+                <li><span>Refresh:</span></li>
                 <li><a href="<?php echo $php_self.'?refresh=2'; ?>">2s</a></li>
                 <li><a href="<?php echo $php_self.'?refresh=5'; ?>">5s</a></li>
                 <li><a href="<?php echo $php_self.'?refresh=30'; ?>">30s</a></li>
                 <li><a href="<?php echo $php_self.'?refresh=60'; ?>">1m</a></li>
                 <li><a href="<?php echo $php_self.'?refresh=300'; ?>">5m</a></li>
+                <li><a href="<?php echo $php_self.''; ?>">None</a></li>
             </ul>
         </div>
     </div>
