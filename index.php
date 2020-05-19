@@ -68,7 +68,7 @@ if (empty($_GET['refresh'])) {
 <html>
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-    <title><?php echo $author_project.' '.$author_version; ?></title>
+    <title>ENV</title>
     <meta http-equiv="refresh" content="<?php echo $page_refresh; ?>" />
     <meta http-equiv="Content-Language" content="en-us" />
 
